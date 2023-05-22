@@ -1,0 +1,32 @@
+<?php
+ 
+$product = $block->getProduct();
+$helper = $this->helper('Awalmula\ProductDiet\Helper\Data'); 
+ 
+?>
+<?php if($product->getData('am_product_diet')): ?>
+    <div class="div-product-diets-mobile">
+        <div class="div-product-diets-content">
+        <?php
+            $options = explode(",",$product->getData('am_product_diet'));
+            $count = count($options);
+            $i = 1;
+            foreach($options as $option):
+            $data = $helper->getDataProductDietByOptionId($option);
+        ?>  
+            <div class="pd-item-mobile">
+                <img class="pd-img-mobile" src="<?= $data->getImageUrl(); ?>" alt="<?= $data->getName(); ?>">
+            </div>
+        <?php 
+            if($i!=$count){ 
+                $i++;
+            } 
+        ?>
+        <?php endforeach; ?>
+        </div>
+    </div>
+    <?php else: ?>
+    <div class="div-product-diets-mobile" style="display: none;">
+        <span>&nbsp</span>
+    </div>
+<?php endif; ?>

@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+	<acl>
+		<resources>
+			<resource id="Magento_Backend::admin">
+                <resource id="Awalmula_Base::main_menu">
+                    <resource id="Awalmula_ProductDiet::productdiet_tab" title="Product Diet" translate="title" sortOrder="20">
+                        <resource id="Awalmula_ProductDiet::productdiet_manage" sortOrder="1000" title="Manage Product Diet">
+                            <resource id="Awalmula_ProductDiet::productdiet_index" sortOrder="10" title="Product Diet Index"/>
+                            <resource id="Awalmula_ProductDiet::productdiet_add" sortOrder="10" title="Product Diet Add"/>
+                            <resource id="Awalmula_ProductDiet::productdiet_delete" sortOrder="10" title="Product Diet Delete"/>
+                            <resource id="Awalmula_ProductDiet::productdiet_edit" sortOrder="10" title="Product Diet Edit"/>
+                            <resource id="Awalmula_ProductDiet::productdiet_massdelete" sortOrder="10" title="Product Diet Mass Delete"/>
+                            <resource id="Awalmula_ProductDiet::productdiet_save" sortOrder="10" title="Product Diet Save"/>
+                            <resource id="Awalmula_ProductDiet::productdiet_upload" sortOrder="10" title="Product Diet Upload"/>
+                        </resource>
+                    </resource>
+                </resource>
+            </resource>
+		</resources>
+	</acl>
+</config>

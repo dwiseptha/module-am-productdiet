@@ -1,0 +1,12 @@
+<?php
+$product = $block->getProduct();
+?>
+<?php if($product->getData('am_product_calories')): ?>
+    <div class="div-product-cal">
+        <div class="pcal-info">
+            <label class="pcal-value"><?= $product->getData('am_product_calories'); ?></label>
+            <br>
+            <label><?= __("Kcal") ?></label>
+        </div>
+    </div>
+<?php endif; ?>
